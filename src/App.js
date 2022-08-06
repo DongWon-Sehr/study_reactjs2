@@ -14,7 +14,7 @@ function App() {
     const [showing, setShowing] = useState(false);
     const [counter, setCounter] = useState(0);
     const [keyword, setKeyword] = useState("");
-    const onClick = () => setCounter((curr) => curr + 1);
+    const onClickCount = () => setCounter((curr) => curr + 1);
     const onChange = (event) => setKeyword(event.target.value);
     const onClickShowing = () => setShowing((curr) => !curr);
 
@@ -44,7 +44,6 @@ function App() {
 
     return (
         <div>
-            {showing ? <ShowData /> : null}
             <input
                 type="text"
                 placeholder="Search here..."
@@ -53,8 +52,9 @@ function App() {
             />
             <h1 className={styles.title}>Welcome Back!</h1>
             <h1 className={styles.title}>{counter}</h1>
-            <Button onClick={onClick} text={"Continue"} />
+            <Button onClick={onClickCount} text={"Count up"} />
             <button onClick={onClickShowing}>{showing ? "Hide" : "Show"}</button>
+            {showing ? <ShowData /> : null}
         </div>
     );
 }
