@@ -2,11 +2,21 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
+function ShowData() {
+    useEffect(() => {
+        console.log("hi :)");
+        return () => console.log("bye :(");
+    }, []);
+    return <h1>My Data</h1>
+}
+
 function App() {
+    const [showing, setShowing] = useState(false);
     const [counter, setCounter] = useState(0);
     const [keyword, setKeyword] = useState("");
     const onClick = () => setCounter((curr) => curr + 1);
     const onChange = (event) => setKeyword(event.target.value);
+    const onClickShowing = () => setShowing((curr) => !curr);
 
     console.log("I run all the time");
 
@@ -34,6 +44,7 @@ function App() {
 
     return (
         <div>
+            {showing ? <ShowData /> : null}
             <input
                 type="text"
                 placeholder="Search here..."
@@ -43,6 +54,7 @@ function App() {
             <h1 className={styles.title}>Welcome Back!</h1>
             <h1 className={styles.title}>{counter}</h1>
             <Button onClick={onClick} text={"Continue"} />
+            <button onClick={onClickShowing}>{showing ? "Hide" : "Show"}</button>
         </div>
     );
 }
