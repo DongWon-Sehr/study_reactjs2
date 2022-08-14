@@ -1,3 +1,4 @@
+import MenuBar from "./components/MenuBar";
 import { useState } from "react";
 
 function AppTodo() {
@@ -18,15 +19,7 @@ function AppTodo() {
 
     return (
         <div>
-            <div id="menu-bar">
-                <a href="/">Home</a>
-                <span> | </span>
-                <a href="/app-default">App Default</a>
-                <span> | </span>
-                <a href="/app-todo">App Todo</a>
-                <span> | </span>
-                <a href="/app-coins">App Coins</a>
-            </div>
+            <MenuBar />
             <h1>Todo</h1>
             <form onSubmit={onSubmit}>
                 <input

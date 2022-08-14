@@ -1,4 +1,5 @@
-import Button from "./Button";
+import Button from "./components/Button";
+import MenuBar from "./components/MenuBar";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
@@ -44,15 +45,7 @@ function AppDefault() {
 
     return (
         <div>
-            <div id="menu-bar">
-                <a href="/">Home</a>
-                <span> | </span>
-                <a href="/app-default">App Default</a>
-                <span> | </span>
-                <a href="/app-todo">App Todo</a>
-                <span> | </span>
-                <a href="/app-coins">App Coins</a>
-            </div>
+            <MenuBar />
             <h1>App Default</h1>
             <input
                 type="text"
