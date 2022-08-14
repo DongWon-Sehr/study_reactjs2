@@ -9,6 +9,7 @@ import App from './App';
 import AppDefault from "./AppDefault";
 import AppTodo from "./AppTodo";
 import AppCoins from "./AppCoins";
+import AppMovies from './AppMovies';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
             <Route path="/app-default" element={<AppDefault />} />
             <Route path="/app-todo" element={<AppTodo />} />
             <Route path="/app-coins" element={<AppCoins />} />
+            <Route path="/app-movies" element={<AppMovies />} />
         </Routes>
     </BrowserRouter>
 );
