@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import App from './App';
-// import AppTodo from "./AppTodo";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import App from './App';
+import AppDefault from "./AppDefault";
+import AppTodo from "./AppTodo";
 import AppCoins from "./AppCoins";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    // <App />
-    // <AppTodo />
-    <AppCoins />
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/app-default" element={<AppDefault />} />
+            <Route path="/app-todo" element={<AppTodo />} />
+            <Route path="/app-coins" element={<AppCoins />} />
+        </Routes>
+    </BrowserRouter>
 );
