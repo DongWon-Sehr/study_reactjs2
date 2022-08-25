@@ -27,9 +27,9 @@ function Movies() {
             <h1>
                 The Movies!
             </h1>
-            {isLoading 
-            ? <h3>Loading ...</h3> 
-            : <MovieList movies={movies} />}
+            {isLoading
+                ? <h3>Loading ...</h3>
+                : <MovieList movies={movies} />}
         </div>
     );
 }
