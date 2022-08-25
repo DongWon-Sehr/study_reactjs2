@@ -1,5 +1,5 @@
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Route,
     Routes,
 } from "react-router-dom";
@@ -8,18 +8,20 @@ import Default from "./routes/Default";
 import Todo from "./routes/Todo";
 import Coins from "./routes/Coins";
 import Movies from "./routes/Movies";
+import MovieDetails from "./routes/MovieDetails";
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/default" element={<Default />} />
                 <Route path="/todo" element={<Todo />} />
                 <Route path="/coins" element={<Coins />} />
                 <Route path="/movies" element={<Movies />} />
+                <Route path="/movies/details" element={<MovieDetails />} />
             </Routes>
-        </Router>
+        </BrowserRouter>
     );
 }
 
