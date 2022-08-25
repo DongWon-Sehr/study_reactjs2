@@ -1,7 +1,7 @@
-import MenuBar from "./components/MenuBar";
+import MenuBar from "../components/MenuBar";
 import { useState } from "react";
 
-function AppTodo() {
+function Todo() {
     const [todo, setTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const onChange = (event) => setTodo(event.target.value);
@@ -42,4 +42,4 @@ function AppTodo() {
     );
 }
 
-export default AppTodo;
+export default Todo;

@@ -1,4 +1,4 @@
-import MenuBar from "./components/MenuBar";
+import MenuBar from "../components/MenuBar";
 import { useState, useEffect } from "react";
 
 function SearchResult({ coinInfo, usdRates }) {
@@ -61,7 +61,7 @@ function SearchResult({ coinInfo, usdRates }) {
     );
 }
 
-function AppCoins() {
+function Coins() {
     const [isLoading, setIsLoading] = useState(true);
     const [coins, setCoins] = useState([]);
     const [usdRates, setUsdRates] = useState([]);
@@ -154,4 +154,4 @@ function AppCoins() {
     );
 }
 
-export default AppCoins;
+export default Coins;

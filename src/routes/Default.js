@@ -1,6 +1,6 @@
-import Button from "./components/Button";
-import MenuBar from "./components/MenuBar";
-import styles from "./App.module.css";
+import Button from "../components/Button";
+import MenuBar from "../components/MenuBar";
+import styles from "../App.module.css";
 import { useState, useEffect } from "react";
 
 function ShowData() {
@@ -11,7 +11,7 @@ function ShowData() {
     return <h1>My Data</h1>
 }
 
-function AppDefault() {
+function Default() {
     const [showing, setShowing] = useState(false);
     const [counter, setCounter] = useState(0);
     const [keyword, setKeyword] = useState("");
@@ -62,4 +62,4 @@ function AppDefault() {
     );
 }
 
-export default AppDefault;
+export default Default;
