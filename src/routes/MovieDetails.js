@@ -6,6 +6,7 @@ const movieApiUrl = "https://yts.mx/api/v2/list_movies_json?minimum_rating=8.5&s
 function MovieDetails() {
     return (
         <div>
+            <MenuBar />
             <h2>movie deatils!</h2>
             <span>movie id:</span>
         </div>
