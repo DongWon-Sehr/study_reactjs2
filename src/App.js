@@ -19,7 +19,7 @@ function App() {
                 <Route path="/todo" element={<Todo />} />
                 <Route path="/coins" element={<Coins />} />
                 <Route path="/movies" element={<Movies />} />
-                <Route path="/movies/details" element={<MovieDetails />} />
+                <Route path="/movies/details/:id" element={<MovieDetails />} />
             </Routes>
         </BrowserRouter>
     );
