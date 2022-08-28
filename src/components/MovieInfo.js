@@ -14,9 +14,9 @@ function MovieInfo({ details }) {
                 <br />
                 <span className='genre-info'>{`🔑 ${details.genres.map(genre => "#" + genre).join(" ")}`}</span>
                 <br />
-                <span className='summary-info'>{`📝 ${details.summary}`}</span>
+                <span className='summary-info'>{`📝 ${details.description_full}`}</span>
                 <br />
-                <a href={details.url} target='_blank'>yts link</a>
+                <a href={details.url} target='_blank'>YTS.MX link</a>
                 <br />
                 <br />
                 <br />
