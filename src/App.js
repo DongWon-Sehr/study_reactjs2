@@ -11,8 +11,9 @@ import Movies from "./routes/Movies";
 import MovieDetails from "./routes/MovieDetails";
 
 function App() {
+    console.log(process.env.PUBLIC_URL);
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/default" element={<Default />} />
