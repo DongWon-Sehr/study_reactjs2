@@ -15,12 +15,12 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/default" element={<Default />} />
-                <Route path="/todo" element={<Todo />} />
-                <Route path="/coins" element={<Coins />} />
-                <Route path="/movies" element={<Movies />} />
-                <Route path="/movies/details/:id" element={<MovieDetails />} />
+                <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+                <Route path={process.env.PUBLIC_URL + "/default"} element={<Default />} />
+                <Route path={process.env.PUBLIC_URL + "/todo"} element={<Todo />} />
+                <Route path={process.env.PUBLIC_URL + "/coins"} element={<Coins />} />
+                <Route path={process.env.PUBLIC_URL + "/movies"} element={<Movies />} />
+                <Route path={process.env.PUBLIC_URL + "/movies/details/:id"} element={<MovieDetails />} />
             </Routes>
         </BrowserRouter>
     );
