@@ -1,15 +1,17 @@
+import {Link} from "react-router-dom";
+
 function MenuBar() {
     return (
         <div id="menu-bar">
-            <a href="/">Home</a>
+            <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
             <span> | </span>
-            <a href="/default">App Default</a>
+            <Link to={`${process.env.PUBLIC_URL}/default`}>App Default</Link>
             <span> | </span>
-            <a href="/todo">App Todo</a>
+            <Link to={`${process.env.PUBLIC_URL}/todo`}>App Todo</Link>
             <span> | </span>
-            <a href="/coins">App Coins</a>
+            <Link to={`${process.env.PUBLIC_URL}/coins`}>App Coins</Link>
             <span> | </span>
-            <a href="/movies">App Movies</a>
+            <Link to={`${process.env.PUBLIC_URL}/movies`}>App Movies</Link>
         </div>
     );
 }
