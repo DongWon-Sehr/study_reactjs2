@@ -17,7 +17,7 @@ function MovieList({ movies }) {
                     <br />
                     <span className='summary-info'>{`📝 ${movie.summary}`}</span>
                     <br />
-                    <Link to={`/movies/details/${movie.id}`}>more details</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/movies/details/${movie.id}`}>more details</Link>
                     <br />
                     <br />
                     <br />
